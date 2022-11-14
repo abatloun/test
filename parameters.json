@@ -1,0 +1,26 @@
+[
+  {
+    "ParameterKey": "CodebuildRoleArn",
+    "ParameterValue": "arn:aws:iam::423345439588:role/cb-service-role"
+  },
+  {
+    "ParameterKey": "CloudformationRoleArn",
+    "ParameterValue": "arn:aws:iam::423345439588:role/cfn-service-role"
+  },
+  {
+    "ParameterKey": "CodepipelineRoleArn",
+    "ParameterValue": "arn:aws:iam::423345439588:role/codepipeline-service-role"
+  },
+  {
+    "ParameterKey": "S3ArtifactStore",
+    "ParameterValue": "bucket-example12123"
+  },
+  {
+    "ParameterKey": "GithubConnectionArn",
+    "ParameterValue": "arn:aws:codestar-connections:us-east-1:423345439588:connection/55909314-2dd7-484b-b030-d66d40bfacfa"
+  },
+  {
+    "ParameterKey": "GithubRepositoryName",
+    "ParameterValue": "Testing"
+  }
+]
