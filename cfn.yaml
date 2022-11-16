@@ -38,9 +38,16 @@ Resources:
     Properties:
       FunctionName: "lambda-example"
       Description: "Lambda example"
-      Code: ./src/
+      Code:
+        ZipFile: !Sub |
+          var response = require('cfn-response');
+          exports.handler = function(event, context) {
+             var responseData = {Value: event.ResourceProperties.List};
+             responseData.Value.push(event.ResourceProperties.AppendedItem);
+             response.send(event, context, response.SUCCESS, responseData);
+          };
+      Runtime: nodejs14.x
       Handler: lambda.handler
-      Runtime: python3.9
       Timeout: 900
       Role: !GetAtt LambdaRole.Arn
       PackageType: Zip
