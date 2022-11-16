@@ -11,6 +11,6 @@ phases:
       - aws cloudformation package --template-file cfn.yaml --s3-bucket example12123 --output-template-file output-file
 artifacts:
   files:
-    - '$TEMPLATE_FILE_NAME'
+    - 'cfn.yaml'
     - '*config.json'
   discard-paths: yes
